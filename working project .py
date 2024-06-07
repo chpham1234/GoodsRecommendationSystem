@@ -10,13 +10,13 @@
 # In[1]:
 
 
-pip install folium
+#pip install folium
 
 
 # In[2]:
 
 
-pip install haversine
+#pip install haversine
 
 
 # In[3]:
@@ -47,7 +47,7 @@ import seaborn as sns
 
 
 # Load the dataset
-data_df = pd.read_csv("goods_transport_data (3) (2).csv")
+data_df = pd.read_csv("goods_transport_data.csv")
 
 # Basic Information
 print(data_df.info())
@@ -294,7 +294,7 @@ from sklearn.preprocessing import OneHotEncoder, LabelEncoder
 import folium
 from folium.plugins import MarkerCluster
 # Load the dataset from the CSV file
-data_df = pd.read_csv("goods_transport_data (3).csv")
+data_df = pd.read_csv("goods_transport_data.csv")
 
 # Label encode the "Intermediate City" column (assuming it is ordinal)
 label_encoder = LabelEncoder()
@@ -489,7 +489,7 @@ def on_clear():
 def submit_feedback():
     feedback = feedback_text_area.get("1.0", tk.END).strip()
     if feedback:
-        feedback_file_path = "C:/Users/omert/OneDrive/Desktop/hehe/feedback.txt"
+        feedback_file_path = "feedback.txt"
         
         with open(feedback_file_path, "a") as file:
             file.write(feedback + "\n")
@@ -522,16 +522,16 @@ def on_submit():
 def on_contact_us():
     contact_info = "Contact Us:\n\n" \
                   "Truck Transporters Corp.\n" \
-                  "Phone: 123-456-7890\n" \
+                  "Phone: 111-222-3333\n" \
                   "Email: truck@example.com\n\n" \
                   "Train Transporters Corp.\n" \
-                  "Phone: 987-654-3210\n" \
+                  "Phone: 222-333-4444\n" \
                   "Email: train@example.com\n\n" \
                   "Air Transporters Corp.\n" \
-                  "Phone: 111-222-3333\n" \
+                  "Phone: 555-555-5555\n" \
                   "Email: air@example.com\n\n" \
                   "Sea Transporters Corp.\n" \
-                  "Phone: 444-555-6666\n" \
+                  "Phone: 666-666-6666\n" \
                   "Email: sea@example.com"
 
     messagebox.showinfo("Contact Us", contact_info)
